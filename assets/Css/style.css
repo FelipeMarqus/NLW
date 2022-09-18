@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image:url(../images/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+
+}
+body * {
+  font-family: 'inter', sans-serif;  
+}
+main {
+    max-width: 580px;
+    width: 90%;
+    margin:  32px auto;
+    display: grid;
+    gap: 24px;
+}
+header {
+    margin-top: 32px;
+    text-align: center;
+    height: calc(120px + 32px);
+}
+header img {
+    width: 120px;
+    border-radius: 50%;
+}
+header div {
+    width: 129px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+    animation: fromtop .7s 2s backwards;
+    animation-delay: 1s;
+}
+header div:hover {
+    transform: scale(1.1);
+}
+ul{
+    list-style: none;
+}
+section {
+    color: white;
+
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+section div {
+    background: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+section h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: -0.47px;
+}
+section p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+section ul {
+    display: flex;
+    gap: 15px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+section ul li {
+    transition: transform .3s;
+}
+section ul li:hover {
+    transform: scale(1.1);
+}
+.game_list img {
+    width: 100px;
+    border-radius: 8px;
+}
+.series_list img {
+    width: 100px;
+    border-radius: 8px;
+}
+.sociais img {
+    width: 40px;
+}
+
+main section {
+    animation: frombottom .7s backwards;
+}
+main section:nth-chield(1) {
+    animation-delay:0;
+}
+main section:nth-chield(2) {
+    animation-delay: .4s;
+}
+main section:nth-chield(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes frombottom {
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
